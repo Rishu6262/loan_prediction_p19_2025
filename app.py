@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 st.title("📈 Gold Price Prediction App")
-st.write("Predict **GLD (Gold ETF Price)** using Machine Learning models")
+
 
 # =======================
 # LOAD MODELS
@@ -34,10 +34,7 @@ rf_model, scaler = load_models()
 # =======================
 # MODEL SELECTION
 # =======================
-model_choice = st.selectbox(
-    "Select ML Model",
-    ["Random Forest Regressor"]
-)
+
 
 # =======================
 # USER INPUTS
@@ -70,4 +67,5 @@ if st.button("🔮 Predict Gold Price"):
 # =======================
 st.markdown("---")
 st.caption("Built with ❤️ using Machine Learning & Streamlit")
+
 
