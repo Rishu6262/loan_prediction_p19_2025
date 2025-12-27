@@ -54,7 +54,7 @@ day = st.number_input("Day", min_value=1, max_value=31, value=1)
 # PREDICTION
 # =======================
 if st.button("🔮 Predict Gold Price"):
-    input_data = np.array([[EUR_USD, SPX, USO, SLV, year, month, day]])
+    input_data = pd.DataFrame([[EUR_USD, SPX, USO, SLV, year, month, day]])
 
     input_scaled = scaler.transform(input_data)
 
@@ -67,5 +67,6 @@ if st.button("🔮 Predict Gold Price"):
 # =======================
 st.markdown("---")
 st.caption("Built with ❤️ using Machine Learning & Streamlit")
+
 
 
