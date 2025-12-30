@@ -50,10 +50,25 @@ day = st.number_input("Day", min_value=1, max_value=31, value=1)
 # =======================
 if st.button("🔮 Predict Gold Price"):
 
-    # IMPORTANT: DataFrame with SAME feature names used during training
+    # Raw user input dictionary
+    input_dict = {
+        "EUR_USD": EUR_USD,
+        "SPX": SPX,
+        "USO": USO,
+        "SLV": SLV,
+        "year": year,
+        "month": month,
+        "day": day
+    }
+
+    # =======================
+    # ALIGN INPUT WITH SCALER FEATURES (CRITICAL FIX)
+    # =======================
+    expected_features = scaler.feature_names_in_
+
     input_df = pd.DataFrame(
-        [[EUR_USD, SPX, USO, SLV, year, month, day]],
-        columns=['EUR_USD', 'SPX', 'USO', 'SLV', 'year', 'month', 'day']
+        [[input_dict[feature] for feature in expected_features]],
+        columns=expected_features
     )
 
     # Scale input
@@ -71,4 +86,3 @@ if st.button("🔮 Predict Gold Price"):
 # =======================
 st.markdown("---")
 st.caption("Built with ❤️ using Machine Learning & Streamlit")
-
