@@ -20,7 +20,7 @@ st.write("Predict **GLD (Gold ETF Price)** using Machine Learning")
 # =======================
 @st.cache_resource
 def load_models():
-    with open("gold_rf_model.pkl", "rb") as f:
+    with open("model.pkl", "rb") as f:
         rf_model = pk.load(f)
 
     with open("scaler.pkl", "rb") as f:
@@ -71,3 +71,4 @@ if st.button("🔮 Predict Gold Price"):
 # =======================
 st.markdown("---")
 st.caption("Built with ❤️ using Machine Learning & Streamlit")
+
