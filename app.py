@@ -50,6 +50,7 @@ day = st.number_input("Day", min_value=1, max_value=31, value=1)
 # =======================
 if st.button("🔮 Predict Gold Price"):
 
+    # User-provided inputs
     input_dict = {
         "EUR_USD": EUR_USD,
         "SPX": SPX,
@@ -61,22 +62,37 @@ if st.button("🔮 Predict Gold Price"):
     }
 
     # ==========================
-    # ALIGN FEATURES WITH MODEL
+    # ALIGN WITH MODEL FEATURES
     # ==========================
     model_features = rf_model.feature_names_in_
 
+    aligned_input = []
+    missing_features = []
+
+    for feat in model_features:
+        if feat in input_dict:
+            aligned_input.append(input_dict[feat])
+        else:
+            # Fill missing features safely
+            aligned_input.append(0)
+            missing_features.append(feat)
+
+    if missing_features:
+        st.warning(
+            f"⚠️ Missing features filled with 0: {missing_features}"
+        )
+
     input_df = pd.DataFrame(
-        [[input_dict[feat] for feat in model_features]],
+        [aligned_input],
         columns=model_features
     )
 
     # ==========================
-    # SCALE ONLY IF REQUIRED
+    # SCALE IF REQUIRED
     # ==========================
-    if hasattr(scaler, "feature_names_in_") and len(scaler.feature_names_in_) == len(model_features):
+    if hasattr(scaler, "feature_names_in_") and list(scaler.feature_names_in_) == list(model_features):
         input_final = scaler.transform(input_df)
     else:
-        # Model was trained without scaling
         input_final = input_df.values
 
     # ==========================
@@ -87,4 +103,3 @@ if st.button("🔮 Predict Gold Price"):
     st.success(
         f"💰 Predicted Gold Price (GLD): **{prediction[0]:.2f}**"
     )
-
