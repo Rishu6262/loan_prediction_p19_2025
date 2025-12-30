@@ -20,7 +20,7 @@ st.write("Predict **GLD (Gold ETF Price)** using Machine Learning")
 # =======================
 @st.cache_resource
 def load_models():
-    with open("model.pkl", "rb") as f:
+    with open("gold_rf_model.pkl", "rb") as f:
         rf_model = pk.load(f)
 
     with open("scaler.pkl", "rb") as f:
@@ -50,7 +50,6 @@ day = st.number_input("Day", min_value=1, max_value=31, value=1)
 # =======================
 if st.button("🔮 Predict Gold Price"):
 
-    # Raw user input dictionary
     input_dict = {
         "EUR_USD": EUR_USD,
         "SPX": SPX,
@@ -61,28 +60,30 @@ if st.button("🔮 Predict Gold Price"):
         "day": day
     }
 
-    # =======================
-    # ALIGN INPUT WITH SCALER FEATURES (CRITICAL FIX)
-    # =======================
-    expected_features = scaler.feature_names_in_
+    # ==========================
+    # ALIGN FEATURES WITH MODEL
+    # ==========================
+    model_features = rf_model.feature_names_in_
 
     input_df = pd.DataFrame(
-        [[input_dict[feature] for feature in expected_features]],
-        columns=expected_features
+        [[input_dict[feat] for feat in model_features]],
+        columns=model_features
     )
 
-    # Scale input
-    input_scaled = scaler.transform(input_df)
+    # ==========================
+    # SCALE ONLY IF REQUIRED
+    # ==========================
+    if hasattr(scaler, "feature_names_in_") and len(scaler.feature_names_in_) == len(model_features):
+        input_final = scaler.transform(input_df)
+    else:
+        # Model was trained without scaling
+        input_final = input_df.values
 
-    # Predict
-    prediction = rf_model.predict(input_scaled)
+    # ==========================
+    # PREDICT
+    # ==========================
+    prediction = rf_model.predict(input_final)
 
     st.success(
         f"💰 Predicted Gold Price (GLD): **{prediction[0]:.2f}**"
     )
-
-# =======================
-# FOOTER
-# =======================
-st.markdown("---")
-st.caption("Built with ❤️ using Machine Learning & Streamlit")
