@@ -107,15 +107,6 @@ Advantages:
 
 ---
 
-## 4. K-Nearest Neighbors (KNN)
-
-Advantages:
-
-* Simple and Effective
-* Learns Patterns from Similar Data Points
-
----
-
 # ⚙️ Data Preprocessing
 
 * Missing Value Checking
