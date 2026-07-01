@@ -1,5 +1,14 @@
 # 🥇 Gold Price Prediction Using Machine Learning
 
+---
+
+## 🔗 Live Demo
+
+**Try the Application Here:**  
+https://loanpredictionp192025-sn8pcapp2ppct49zbarkgad.streamlit.app/
+
+---
+
 ## 📌 Project Overview
 
 Gold is one of the most valuable and widely traded assets in the world. Its price is influenced by various economic, financial, and geopolitical factors such as stock market performance, oil prices, silver prices, and currency exchange rates.
