@@ -417,6 +417,8 @@ Aspiring Data Science | Machine Learning Enthusiast | Python Developer
 ---
 
 Connect with me on LinkedIn and GitHub to explore more Data Science and Machine Learning projects.
- linkedIN : https://www.linkedin.com/in/rishu-gurjar-58072a333/
+
+
+linkedIN : https://www.linkedin.com/in/rishu-gurjar-58072a333/
 ---
  
