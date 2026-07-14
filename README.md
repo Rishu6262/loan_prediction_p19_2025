@@ -105,27 +105,43 @@ Represents gold price and serves as the target variable for prediction.
 
 ---
 
-# 🛠 Technologies Used
+# 🛠️ Technologies Used
 
-### Programming Language
+The project was developed using the following technologies, libraries, and tools to build an end-to-end Machine Learning solution for gold price prediction.
 
-* Python
+## 💻 Programming Language
 
-### Libraries
+* **Python** – The primary programming language used for data analysis, machine learning model development, and application deployment.
 
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-Learn
-* Joblib
-* Streamlit
+## 📊 Data Analysis & Manipulation
 
-### Machine Learning
+* **Pandas** – Used for loading, cleaning, transforming, and analyzing the dataset.
+* **NumPy** – Provides efficient numerical computations and array operations required for data processing.
 
-* Regression Models
-* Model Evaluation
-* Feature Engineering
+## 📈 Data Visualization
+
+* **Matplotlib** – Used to create various charts and plots for data exploration.
+* **Seaborn** – Generates statistical visualizations such as heatmaps, distribution plots, and correlation analysis.
+
+## 🤖 Machine Learning
+
+* **Scikit-Learn** – Used for data preprocessing, feature engineering, model training, evaluation, and prediction.
+* **Regression Algorithms** – Implemented and compared multiple regression models to identify the best-performing predictor.
+* **Model Evaluation** – Performance measured using MAE, MSE, RMSE, and R² Score to ensure accurate and reliable predictions.
+
+## 💾 Model Serialization
+
+* **Joblib** – Used to save and load the trained Machine Learning model for deployment.
+
+## 🌐 Web Application
+
+* **Streamlit** – Developed an interactive web application that allows users to input financial indicators and receive real-time gold price predictions.
+
+## 🔧 Development Tools
+
+* **Google colab Notebook** – Used for Exploratory Data Analysis (EDA), experimentation, and model development.
+* **Git & GitHub** – Used for version control, collaboration, and project hosting.
+
 
 ---
 
