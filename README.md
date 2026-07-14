@@ -4,7 +4,7 @@
 
 ## 🔗 Live Demo
 
-**Try the Application Here:**  
+**Try the Application Here:** 
 https://loanpredictionp192025-sn8pcapp2ppct49zbarkgad.streamlit.app/
 
 ---
@@ -421,4 +421,3 @@ Connect with me on LinkedIn and GitHub to explore more Data Science and Machine 
 
 linkedIN : https://www.linkedin.com/in/rishu-gurjar-58072a333/
 ---
- 
