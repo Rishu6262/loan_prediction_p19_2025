@@ -427,25 +427,34 @@ The **Gold Price Prediction Using Machine Learning** project demonstrates how da
 
 # 👨‍💻 Author
 
-**Rishu Gurjar**
+## **Rishu Gurjar**
 
-Aspiring Data Science | Machine Learning Enthusiast | Python Developer
+**Aspiring Data Scientist | Machine Learning Enthusiast | Python Developer**
 
----
-
-### Skills
-
-* Python
-* SQL
-* Machine Learning
-* Data Analysis
-* Streamlit
-* Scikit-Learn
+I am passionate about building real-world **Machine Learning**, **Data Science**, and **Artificial Intelligence** projects that solve practical business problems. I enjoy working with data, developing predictive models, and deploying interactive web applications using Python and Streamlit. My goal is to continuously improve my technical skills while creating impactful, industry-ready projects.
 
 ---
 
-Connect with me on LinkedIn and GitHub to explore more Data Science and Machine Learning projects.
+## 💼 Technical Skills
 
+* 🐍 Python
+* 🗄️ SQL
+* 🤖 Machine Learning
+* 📊 Data Analysis
+* 📈 Data Visualization
+* 🧠 Scikit-Learn
+* 🌐 Streamlit
+* 📑 Pandas & NumPy
+* 📉 Matplotlib & Seaborn
+* 🔧 Git & GitHub
 
-linkedIN : https://www.linkedin.com/in/rishu-gurjar-58072a333/
+---
+
+## 🌐 Connect With Me
+
+* **GitHub:** https://github.com/Rishu6262
+* **LinkedIn:** https://www.linkedin.com/in/rishu-gurjar-58072a333/
+
+Feel free to connect with me for discussions on **Data Science, Machine Learning, Python Development, and AI projects**. I'm always interested in learning, collaborating, and building innovative solutions.
+
 ---
